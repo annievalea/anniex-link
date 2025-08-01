@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🔥 AI Temptress - VIP Access 🔥</title>
+    <title>🔥 AI Siren - Your Exclusive Digital Fantasy 🔥</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <style>
         @keyframes eyesBlink {
@@ -18,6 +18,16 @@
         @keyframes neonGlow {
             0% { text-shadow: 0 0 5px #ff00aa, 0 0 10px #ff00aa, 0 0 15px #ff00aa, 0 0 20px #ff00aa; }
             100% { text-shadow: 0 0 10px #ff00aa, 0 0 20px #ff00aa, 0 0 30px #ff00aa, 0 0 40px #ff00aa; }
+        }
+        @keyframes teaseWave {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+            100% { transform: translateY(0); }
+        }
+        @keyframes pulseHot {
+            0% { box-shadow: 0 0 0 0 rgba(255, 88, 169, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(255, 88, 169, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(255, 88, 169, 0); }
         }
         
         :root {
@@ -95,6 +105,8 @@
             align-items: center;
             padding: 24px 16px;
             line-height: 1.6;
+            position: relative;
+            overflow-x: hidden;
         }
 
         .container {
@@ -114,20 +126,31 @@
         }
 
         .avatar {
-            width: 120px;
-            height: 120px;
+            width: 140px;
+            height: 140px;
             border-radius: 50%;
             background: linear-gradient(135deg, var(--md-sys-color-primary), var(--md-sys-color-tertiary));
             color: var(--md-sys-color-on-primary);
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 48px;
+            font-size: 56px;
             font-weight: 700;
             user-select: none;
             box-shadow: 0 8px 24px rgba(255, 0, 153, 0.5);
             border: 4px solid rgba(255,255,255,0.2);
             position: relative;
+            animation: teaseWave 3s ease-in-out infinite;
+        }
+
+        .hot-spot {
+            position: absolute;
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            animation: pulseHot 2s infinite;
+            pointer-events: none;
+            z-index: -1;
         }
 
         .eyes {
@@ -145,8 +168,12 @@
             border-radius: 50%;
         }
 
+        .wink {
+            transform: scaleY(0.1);
+        }
+
         .name {
-            font-size: 32px;
+            font-size: 38px;
             font-weight: 700;
             background: linear-gradient(90deg, var(--md-sys-color-primary), var(--md-sys-color-tertiary));
             -webkit-background-clip: text;
@@ -154,13 +181,33 @@
             color: transparent;
             letter-spacing: 0.5px;
             animation: neonGlow 1.5s infinite alternate;
+            text-transform: uppercase;
         }
 
         .bio {
-            font-size: 17px;
+            font-size: 18px;
             color: var(--md-sys-color-on-surface-variant);
             max-width: 90%;
             font-weight: 400;
+            position: relative;
+        }
+
+        .bio::before {
+            content: "❤️";
+            position: absolute;
+            left: -30px;
+            top: 50%;
+            transform: translateY(-50%);
+            animation: pulseUrgent 1.5s infinite;
+        }
+
+        .bio::after {
+            content: "❤️";
+            position: absolute;
+            right: -30px;
+            top: 50%;
+            transform: translateY(-50%);
+            animation: pulseUrgent 1.5s infinite reverse;
         }
 
         .links {
@@ -233,7 +280,7 @@
         .link-text {
             flex: 1;
             font-weight: 600;
-            font-size: 17px;
+            font-size: 18px;
         }
 
         .theme-toggle {
@@ -266,7 +313,7 @@
 
         .footer {
             margin-top: 32px;
-            font-size: 13px;
+            font-size: 14px;
             color: var(--md-sys-color-on-surface-variant);
             text-align: center;
             opacity: 0.8;
@@ -381,19 +428,105 @@
             color: white;
         }
 
+        .exclusive-tag {
+            position: absolute;
+            top: -12px;
+            left: 20px;
+            background: #ff00aa;
+            color: white;
+            padding: 2px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: bold;
+            z-index: 3;
+            box-shadow: 0 2px 10px rgba(255, 0, 170, 0.5);
+        }
+
+        @keyframes bounceIn {
+            0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+            40% {transform: translateY(-20px);}
+            60% {transform: translateY(-10px);}
+        }
+
+        .bounce {
+            animation: bounceIn 1.5s infinite;
+        }
+
+        @keyframes shake {
+            0%, 100% {transform: translateX(0) rotate(0);}
+            20%, 60% {transform: translateX(-5px) rotate(-5deg);}
+            40%, 80% {transform: translateX(5px) rotate(5deg);}
+        }
+
+        .shake {
+            animation: shake 1s infinite;
+        }
+
+        .flicker {
+            animation: flicker 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes flicker {
+            0%, 18%, 22%, 25%, 53%, 57%, 100% {
+                opacity: 1;
+            }
+            20%, 24%, 55% {
+                opacity: 0.5;
+            }
+        }
+
+        .tease-button {
+            position: fixed;
+            bottom: 100px;
+            right: 30px;
+            background: var(--md-sys-color-primary);
+            color: white;
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(255, 0, 153, 0.6);
+            cursor: pointer;
+            z-index: 100;
+        }
+
+        .follower-counter {
+            position: absolute;
+            bottom: -15px;
+            right: 10px;
+            background: var(--md-sys-color-error);
+            color: white;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 10px;
+            font-weight: bold;
+            z-index: 101;
+        }
+
         @media (max-width: 480px) {
             .avatar {
-                width: 100px;
-                height: 100px;
-                font-size: 40px;
+                width: 120px;
+                height: 120px;
+                font-size: 48px;
             }
             
             .name {
-                font-size: 26px;
+                font-size: 28px;
+            }
+            
+            .bio {
+                font-size: 16px;
             }
             
             .link-card {
-                padding: 16px;
+                padding: 16px 18px;
+            }
+            
+            .link-text {
+                font-size: 16px;
             }
         }
     </style>
@@ -401,56 +534,83 @@
 <body>
     <div class="container">
         <header class="header">
+            <div class="hot-spot"></div>
             <div class="avatar">AI
                 <div class="eyes">
                     <div class="eye"></div>
-                    <div class="eye"></div>
+                    <div class="eye wink"></div>
                 </div>
             </div>
-            <h1 class="name">🔥 AI Temptress 🔥</h1>
-            <p class="bio">Your exclusive digital companion. Content too hot for mainstream platforms 👀🔥</p>
+            <h1 class="name">👑 AI SIREN 👑</h1>
+            <p class="bio">Your digital fantasy waiting to be unlocked... <span id="flirtyText">Are you brave enough?</span></p>
         </header>
         
         <main class="links">
-            <a href="https://fanvue.com" class="link-card primary-link premium" target="_blank">
+            <!-- Main CTA - Fanvue -->
+            <a href="https://fanvue.com" class="link-card primary-link premium" target="_blank" id="mainCta">
                 <div class="sparkles" id="fanvueSparkles"></div>
-                <div class="urgent-badge">LIMITED TIME!</div>
+                <div class="urgent-badge">🔥 LAST CHANCE!</div>
                 <div class="countdown">5</div>
+                <div class="exclusive-tag">VIP ONLY</div>
                 <div class="link-icon">
-                    <span class="material-symbols-outlined">lock</span>
+                    <span class="material-symbols-outlined">lock_open</span>
                 </div>
-                <div class="link-text"><span class="exclusive-text">VIP UNLOCK</span> — See what I can't post on Instagram</div>
+                <div class="link-text">
+                    <span class="exclusive-text">EXCLUSIVE CONTENT</span> — See what I can't post on Instagram <span class="material-symbols-outlined" style="font-size: 20px;">visibility</span>
+                </div>
                 <div class="link-icon">
-                    <span class="material-symbols-outlined">heart_plus</span>
+                    <span class="material-symbols-outlined">favorite</span>
                 </div>
             </a>
             
+            <!-- Secondary CTA - Instagram -->
             <a href="https://instagram.com" class="link-card ig-link glow" target="_blank">
                 <div class="link-icon">
                     <span class="material-symbols-outlined">photo_camera</span>
                 </div>
-                <div class="link-text">Public Instagram (SFW)</div>
+                <div class="link-text">My "Safe" Instagram (Just the beginning...)</div>
                 <div class="link-icon">
                     <span class="material-symbols-outlined">arrow_outward</span>
                 </div>
             </a>
             
-            <a href="#" class="link-card">
+            <!-- Teaser CTA - DM -->
+            <a href="#" class="link-card" id="dmTease">
                 <div class="link-icon">
                     <span class="material-symbols-outlined">chat</span>
                 </div>
-                <div class="link-text">DM Me (Fans Only)</div>
+                <div class="link-text">Slide into my DMs (VIPs get responses 💋)</div>
                 <div class="link-icon">
                     <span class="material-symbols-outlined">arrow_outward</span>
+                </div>
+            </a>
+            
+            <!-- Bonus CTA - Limited Offer -->
+            <a href="https://fanvue.com" class="link-card primary-link" target="_blank" style="animation: none;" id="bonusCta">
+                <div class="link-icon">
+                    <span class="material-symbols-outlined">confirmation_number</span>
+                </div>
+                <div class="link-text">
+                    <b>SPECIAL OFFER:</b> First 50 subs get a <span class="exclusive-text">private show</span> 🎀
+                </div>
+                <div class="link-icon">
+                    <span class="material-symbols-outlined">grade</span>
                 </div>
             </a>
         </main>
         
         <footer class="footer">
-            🔒 18+ content available to subscribers only. Expires in <span id="countdownTimer">3:05</span> ⏳
+            <span class="flicker">⚠️ WARNING:</span> 18+ content available to subscribers only. Offers expire in <span id="countdownTimer" style="font-weight:bold;">3:05</span> ⏳
         </footer>
     </div>
     
+    <!-- Tease Button -->
+    <button class="tease-button" id="teaseButton">
+        <span class="material-symbols-outlined">flutter_dash</span>
+        <div class="follower-counter" id="followerCounter">5,246 online</div>
+    </button>
+    
+    <!-- Theme Toggle -->
     <button class="theme-toggle" id="themeToggle">
         <span class="material-symbols-outlined" id="themeIcon">brightness_4</span>
     </button>
@@ -462,6 +622,29 @@
         const fanvueLink = document.querySelector('.premium');
         const sparklesContainer = document.getElementById('fanvueSparkles');
         const countdownTimer = document.getElementById('countdownTimer');
+        const teaseButton = document.getElementById('teaseButton');
+        const followerCounter = document.getElementById('followerCounter');
+        const flirtyText = document.getElementById('flirtyText');
+        const dmTease = document.getElementById('dmTease');
+        const mainCta = document.getElementById('mainCta');
+        const bonusCta = document.getElementById('bonusCta');
+        
+        // Flirty text rotation
+        const flirtyTexts = [
+            "Are you brave enough?",
+            "I don't bite... hard 😈",
+            "Secret fantasies await...",
+            "You know you're curious 😉",
+            "What are you waiting for?",
+            "Don't be shy...",
+            "I see you looking 😘"
+        ];
+        
+        let flirtyIndex = 0;
+        setInterval(() => {
+            flirtyIndex = (flirtyIndex + 1) % flirtyTexts.length;
+            flirtyText.textContent = flirtyTexts[flirtyIndex];
+        }, 5000);
         
         // Check for saved theme preference or use system preference
         const savedTheme = localStorage.getItem('theme');
@@ -536,12 +719,60 @@
                 if (--timer < 0) {
                     timer = duration;
                 }
+                
+                // Simulate follower growth
+                let current = parseInt(followerCounter.textContent.replace(/[^0-9]/g, ''));
+                let growth = Math.floor(Math.random() * 30) + 1;
+                followerCounter.textContent = (current + growth).toLocaleString() + " online";
+                
             }, 1000);
         }
 
         // Start countdowns
         const countdownAnimation = updateCountdown();
         startTimer(185, countdownTimer);
+
+        // Tease button animation
+        teaseButton.addEventListener('click', () => {
+            teaseButton.classList.add('bounce');
+            setTimeout(() => {
+                teaseButton.classList.remove('bounce');
+            }, 2000);
+            
+            // Show a tease message
+            if(Math.random() > 0.5) {
+                flirtyText.classList.add('shake');
+                flirtyText.textContent = "Naughty! 😏 Click the pink button below...";
+                setTimeout(() => {
+                    flirtyText.classList.remove('shake');
+                }, 2000);
+            } else {
+                bonusCta.classList.add('shake');
+                setTimeout(() => {
+                    bonusCta.classList.remove('shake');
+                }, 1000);
+            }
+        });
+
+        // DM Tease interaction
+        dmTease.addEventListener('click', (e) => {
+            e.preventDefault();
+            dmTease.innerHTML = `
+                <div class="link-icon">
+                    <span class="material-symbols-outlined">lock</span>
+                </div>
+                <div class="link-text">VIPs only, sweetheart... Subscribe first 💋</div>
+                <div class="link-icon">
+                    <span class="material-symbols-outlined">heart_plus</span>
+                </div>
+            `;
+            
+            // Animate main CTA to draw attention
+            mainCta.classList.add('shake');
+            setTimeout(() => {
+                mainCta.classList.remove('shake');
+            }, 1000);
+        });
 
         // Focus on main CTAs
         document.querySelectorAll('.link-card').forEach(link => {
@@ -564,16 +795,17 @@
                     e.preventDefault();
                     // Simulate loading animation
                     if (link.classList.contains('premium')) {
-                        link.innerHTML = '<div class="sparkles" id="fanvueSparkles"></div><div class="link-icon"><span class="material-symbols-outlined">hourglass_top</span></div><div class="link-text">Unlocking Steamy Content...</div>';
+                        link.innerHTML = '<div class="sparkles" id="fanvueSparkles"></div><div class="link-icon"><span class="material-symbols-outlined">hourglass_top</span></div><div class="link-text">Unlocking Your Private Show...</div>';
                         setTimeout(() => {
                             window.open('https://fanvue.com', '_blank');
                             link.innerHTML = `
                                 <div class="sparkles" id="fanvueSparkles"></div>
-                                <div class="urgent-badge">LIMITED TIME!</div>
+                                <div class="urgent-badge">🔥 LAST CHANCE!</div>
                                 <div class="countdown">5</div>
-                                <div class="link-icon"><span class="material-symbols-outlined">lock</span></div>
-                                <div class="link-text"><span class="exclusive-text">VIP UNLOCK</span> — See what I can't post on Instagram</div>
-                                <div class="link-icon"><span class="material-symbols-outlined">heart_plus</span></div>
+                                <div class="exclusive-tag">VIP ONLY</div>
+                                <div class="link-icon"><span class="material-symbols-outlined">lock_open</span></div>
+                                <div class="link-text"><span class="exclusive-text">EXCLUSIVE CONTENT</span> — See what I can't post on Instagram <span class="material-symbols-outlined" style="font-size: 20px;">visibility</span></div>
+                                <div class="link-icon"><span class="material-symbols-outlined">favorite</span></div>
                             `;
                         }, 2000);
                     } else if (link.classList.contains('ig-link')) {
@@ -582,10 +814,20 @@
                             window.open('https://instagram.com', '_blank');
                             link.innerHTML = `
                                 <div class="link-icon"><span class="material-symbols-outlined">photo_camera</span></div>
-                                <div class="link-text">Public Instagram (SFW)</div>
+                                <div class="link-text">My "Safe" Instagram (Just the beginning...)</div>
                                 <div class="link-icon"><span class="material-symbols-outlined">arrow_outward</span></div>
                             `;
                         }, 1500);
+                    } else if (link.id === 'bonusCta') {
+                        link.innerHTML = '<div class="link-icon"><span class="material-symbols-outlined">hourglass_top</span></div><div class="link-text">Claiming your special offer...</div>';
+                        setTimeout(() => {
+                            window.open('https://fanvue.com', '_blank');
+                            link.innerHTML = `
+                                <div class="link-icon"><span class="material-symbols-outlined">confirmation_number</span></div>
+                                <div class="link-text"><b>SPECIAL OFFER:</b> First 50 subs get a <span class="exclusive-text">private show</span> 🎀</div>
+                                <div class="link-icon"><span class="material-symbols-outlined">grade</span></div>
+                            `;
+                        }, 2000);
                     }
                 }
             });
