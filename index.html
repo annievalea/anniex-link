@@ -179,7 +179,7 @@
             align-items: center;
             gap: 16px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-            border: 2px solid var(--md-sys-color-outline);
+            border: 2px solid var(--md-sys-color-primary-container);
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             position: relative;
             overflow: hidden;
@@ -210,9 +210,9 @@
         }
 
         .primary-link {
-            background: linear-gradient(90deg, var(--md-sys-color-primary), var(--md-sys-color-secondary));
+            background: linear-gradient(45deg, var(--md-sys-color-primary), var(--md-sys-color-secondary));
             color: var(--md-sys-color-on-primary);
-            border-color: transparent;
+            border: 2px solid var(--md-sys-color-secondary);
         }
 
         .primary-link .link-icon {
@@ -280,31 +280,35 @@
             animation: premiumPulse 1s infinite alternate, pulseUrgent 1.5s infinite;
             position: relative;
             overflow: hidden;
+            border: 2px solid var(--md-sys-color-tertiary) !important;
         }
 
         .countdown {
             position: absolute;
-            top: -10px;
-            right: -10px;
+            top: -8px;
+            right: -8px;
             background: var(--md-sys-color-error);
             color: var(--md-sys-color-on-error);
             border-radius: 50%;
-            width: 24px;
-            height: 24px;
+            width: 22px;
+            height: 22px;
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 12px;
+            font-size: 11px;
             font-weight: bold;
             z-index: 2;
+            border: 2px solid var(--md-sys-color-on-error);
         }
 
         @keyframes glowPulse {
             0% {
                 box-shadow: 0 0 10px rgba(255, 0, 153, 0.7);
+                border-color: var(--md-sys-color-primary);
             }
             100% {
                 box-shadow: 0 0 20px rgba(255, 0, 153, 0.9);
+                border-color: var(--md-sys-color-tertiary);
             }
         }
 
@@ -334,34 +338,47 @@
 
         .sparkle {
             position: absolute;
-            width: 3px;
-            height: 3px;
+            width: 4px;
+            height: 4px;
             background-color: white;
             border-radius: 50%;
             opacity: 0;
+            box-shadow: 0 0 4px 1px rgba(255,255,255,0.8);
         }
 
         .urgent-badge {
             position: absolute;
             background: var(--md-sys-color-secondary);
-            color: white;
-            padding: 2px 8px;
+            color: var(--md-sys-color-on-secondary);
+            padding: 2px 10px;
             border-radius: 12px;
-            font-size: 11px;
+            font-size: 12px;
             font-weight: bold;
-            top: -8px;
+            top: -10px;
             right: 16px;
             transform: rotate(15deg);
             animation: pulseUrgent 1s infinite;
+            border: 1px solid var(--md-sys-color-on-secondary);
+            z-index: 3;
         }
 
         .exclusive-text {
             font-weight: bold;
-            background: linear-gradient(90deg, #ff00aa, #ff5500);
+            background: linear-gradient(90deg, #ffebf7, #ffffff);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
             animation: neonGlow 1.5s infinite alternate;
+        }
+
+        .ig-link {
+            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+            color: white;
+            border: 2px solid #dc2743 !important;
+        }
+
+        .ig-link .link-icon {
+            color: white;
         }
 
         @media (max-width: 480px) {
@@ -408,7 +425,7 @@
                 </div>
             </a>
             
-            <a href="https://instagram.com" class="link-card primary-link glow" target="_blank">
+            <a href="https://instagram.com" class="link-card ig-link glow" target="_blank">
                 <div class="link-icon">
                     <span class="material-symbols-outlined">photo_camera</span>
                 </div>
@@ -543,7 +560,7 @@
             });
 
             link.addEventListener('click', (e) => {
-                if (link.classList.contains('primary-link')) {
+                if (link.classList.contains('primary-link') || link.classList.contains('ig-link')) {
                     e.preventDefault();
                     // Simulate loading animation
                     if (link.classList.contains('premium')) {
@@ -559,8 +576,8 @@
                                 <div class="link-icon"><span class="material-symbols-outlined">heart_plus</span></div>
                             `;
                         }, 2000);
-                    } else {
-                        link.innerHTML = '<div class="link-icon"><span class="material-symbols-outlined">progress_activity</span></div><div class="link-text">Loading...</div>';
+                    } else if (link.classList.contains('ig-link')) {
+                        link.innerHTML = '<div class="link-icon"><span class="material-symbols-outlined">progress_activity</span></div><div class="link-text">Opening Instagram...</div>';
                         setTimeout(() => {
                             window.open('https://instagram.com', '_blank');
                             link.innerHTML = `
