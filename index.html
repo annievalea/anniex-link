@@ -3,47 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🔥 AI Siren - Your Exclusive Digital Fantasy 🔥</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>🔥 Annie Valea - Your Exclusive Digital Fantasy 🔥</title>
+    <!-- Preconnect to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Load only necessary font weights -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,400,0,0" />
+    <!-- Preload critical CSS -->
     <style>
-        @keyframes eyesBlink {
-            0%, 100% { transform: scaleY(1); }
-            50% { transform: scaleY(0.1); }
-        }
-        @keyframes pulseUrgent {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
-        }
-        @keyframes neonGlow {
-            0% { text-shadow: 0 0 5px #ff00aa, 0 0 10px #ff00aa, 0 0 15px #ff00aa, 0 0 20px #ff00aa; }
-            100% { text-shadow: 0 0 10px #ff00aa, 0 0 20px #ff00aa, 0 0 30px #ff00aa, 0 0 40px #ff00aa; }
-        }
-        @keyframes teaseWave {
-            0% { transform: translateY(0); }
-            50% { transform: translateY(-8px); }
-            100% { transform: translateY(0); }
-        }
-        @keyframes pulseHot {
-            0% { box-shadow: 0 0 0 0 rgba(255, 88, 169, 0.7); }
-            70% { box-shadow: 0 0 0 15px rgba(255, 88, 169, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(255, 88, 169, 0); }
-        }
-        
+        /* Critical CSS - above the fold content */
         :root {
-            --md-sys-color-primary: #ff0099;
+            --md-sys-color-primary: #e00080;
             --md-sys-color-on-primary: #ffffff;
             --md-sys-color-primary-container: #ffcce6;
             --md-sys-color-on-primary-container: #66003d;
-            --md-sys-color-secondary: #ff5500;
+            --md-sys-color-secondary: #e04900;
             --md-sys-color-on-secondary: #ffffff;
             --md-sys-color-secondary-container: #ffddcc;
             --md-sys-color-on-secondary-container: #992b00;
-            --md-sys-color-tertiary: #aa00ff;
+            --md-sys-color-tertiary: #9900e0;
             --md-sys-color-on-tertiary: #ffffff;
             --md-sys-color-tertiary-container: #f2ccff;
             --md-sys-color-on-tertiary-container: #4d0099;
-            --md-sys-color-error: #ff3366;
+            --md-sys-color-error: #e02655;
             --md-sys-color-on-error: #ffffff;
             --md-sys-color-error-container: #ffccd5;
             --md-sys-color-on-error-container: #990033;
@@ -56,27 +38,27 @@
             --md-sys-color-on-surface-variant: #993366;
             --md-sys-color-inverse-surface: #4d004d;
             --md-sys-color-inverse-on-surface: #ffebf7;
-            --md-sys-color-surface-tint: #ff0099;
+            --md-sys-color-surface-tint: #e00080;
         }
 
         [data-theme="dark"] {
-            --md-sys-color-primary: #ff66c2;
+            --md-sys-color-primary: #ff59b7;
             --md-sys-color-on-primary: #330033;
-            --md-sys-color-primary-container: #cc0077;
+            --md-sys-color-primary-container: #b30065;
             --md-sys-color-on-primary-container: #ffccdd;
-            --md-sys-color-secondary: #ff8855;
+            --md-sys-color-secondary: #ff7748;
             --md-sys-color-on-secondary: #330000;
-            --md-sys-color-secondary-container: #ff5e1a;
+            --md-sys-color-secondary-container: #cc4100;
             --md-sys-color-on-secondary-container: #ffddcc;
-            --md-sys-color-tertiary: #cc88ff;
+            --md-sys-color-tertiary: #c370ff;
             --md-sys-color-on-tertiary: #200033;
-            --md-sys-color-tertiary-container: #8800cc;
+            --md-sys-color-tertiary-container: #7900b3;
             --md-sys-color-on-tertiary-container: #f2ccff;
-            --md-sys-color-error: #ff7799;
+            --md-sys-color-error: #ff6588;
             --md-sys-color-on-error: #330000;
-            --md-sys-color-error-container: #cc0033;
+            --md-sys-color-error-container: #b3002e;
             --md-sys-color-on-error-container: #ffccdd;
-            --md-sys-color-outline: #cc99ff;
+            --md-sys-color-outline: #b388ff;
             --md-sys-color-background: #1a001a;
             --md-sys-color-on-background: #ffccdd;
             --md-sys-color-surface: #1a001a;
@@ -85,14 +67,13 @@
             --md-sys-color-on-surface-variant: #ffbbdd;
             --md-sys-color-inverse-surface: #ffccdd;
             --md-sys-color-inverse-on-surface: #4d004d;
-            --md-sys-color-surface-tint: #ff66c2;
+            --md-sys-color-surface-tint: #ff59b7;
         }
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         body {
@@ -103,7 +84,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 24px 16px;
+            padding: 16px;
             line-height: 1.6;
             position: relative;
             overflow-x: hidden;
@@ -111,10 +92,10 @@
 
         .container {
             width: 100%;
-            max-width: 600px;
+            max-width: 480px;
             display: flex;
             flex-direction: column;
-            gap: 28px;
+            gap: 20px;
         }
 
         .header {
@@ -122,144 +103,80 @@
             flex-direction: column;
             align-items: center;
             text-align: center;
-            gap: 18px;
+            gap: 16px;
+            margin-bottom: 8px;
         }
 
         .avatar {
-            width: 140px;
-            height: 140px;
+            width: 120px;
+            height: 120px;
             border-radius: 50%;
             background: linear-gradient(135deg, var(--md-sys-color-primary), var(--md-sys-color-tertiary));
             color: var(--md-sys-color-on-primary);
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 56px;
+            font-size: 48px;
             font-weight: 700;
             user-select: none;
-            box-shadow: 0 8px 24px rgba(255, 0, 153, 0.5);
-            border: 4px solid rgba(255,255,255,0.2);
+            box-shadow: 0 4px 16px rgba(224, 0, 128, 0.4);
+            border: 3px solid rgba(255,255,255,0.2);
             position: relative;
-            animation: teaseWave 3s ease-in-out infinite;
-        }
-
-        .hot-spot {
-            position: absolute;
-            width: 140px;
-            height: 140px;
-            border-radius: 50%;
-            animation: pulseHot 2s infinite;
-            pointer-events: none;
-            z-index: -1;
-        }
-
-        .eyes {
-            position: absolute;
-            display: flex;
-            gap: 10px;
-            top: 40%;
-            animation: eyesBlink 4s infinite;
-        }
-
-        .eye {
-            width: 16px;
-            height: 16px;
-            background-color: var(--md-sys-color-on-primary);
-            border-radius: 50%;
-        }
-
-        .wink {
-            transform: scaleY(0.1);
+            will-change: transform;
         }
 
         .name {
-            font-size: 38px;
+            font-size: 28px;
             font-weight: 700;
             background: linear-gradient(90deg, var(--md-sys-color-primary), var(--md-sys-color-tertiary));
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
             letter-spacing: 0.5px;
-            animation: neonGlow 1.5s infinite alternate;
             text-transform: uppercase;
         }
 
         .bio {
-            font-size: 18px;
+            font-size: 16px;
             color: var(--md-sys-color-on-surface-variant);
             max-width: 90%;
             font-weight: 400;
             position: relative;
-        }
-
-        .bio::before {
-            content: "❤️";
-            position: absolute;
-            left: -30px;
-            top: 50%;
-            transform: translateY(-50%);
-            animation: pulseUrgent 1.5s infinite;
-        }
-
-        .bio::after {
-            content: "❤️";
-            position: absolute;
-            right: -30px;
-            top: 50%;
-            transform: translateY(-50%);
-            animation: pulseUrgent 1.5s infinite reverse;
+            padding: 0 8px;
+            text-wrap: balance;
         }
 
         .links {
             display: flex;
             flex-direction: column;
-            gap: 18px;
+            gap: 16px;
         }
 
         .link-card {
             background: var(--md-sys-color-surface-variant);
             color: var(--md-sys-color-on-surface);
-            border-radius: 16px;
-            padding: 20px 24px;
+            border-radius: 14px;
+            padding: 16px 18px;
             text-decoration: none;
             display: flex;
             align-items: center;
-            gap: 16px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-            border: 2px solid var(--md-sys-color-primary-container);
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            gap: 14px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            border: 1px solid var(--md-sys-color-primary-container);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
             position: relative;
             overflow: hidden;
-        }
-
-        .link-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
-            transition: 0.6s;
-        }
-
-        .link-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 24px rgba(255, 0, 153, 0.4);
-        }
-
-        .link-card:hover::before {
-            left: 100%;
+            min-height: 60px;
         }
 
         .link-card:active {
-            transform: translateY(-1px);
+            transform: translateY(1px);
         }
 
         .primary-link {
             background: linear-gradient(45deg, var(--md-sys-color-primary), var(--md-sys-color-secondary));
             color: var(--md-sys-color-on-primary);
-            border: 2px solid var(--md-sys-color-secondary);
+            border: 1px solid var(--md-sys-color-secondary);
         }
 
         .primary-link .link-icon {
@@ -280,15 +197,15 @@
         .link-text {
             flex: 1;
             font-weight: 600;
-            font-size: 18px;
+            font-size: 16px;
         }
 
         .theme-toggle {
             position: fixed;
-            bottom: 24px;
-            right: 24px;
-            width: 56px;
-            height: 56px;
+            bottom: 20px;
+            right: 20px;
+            width: 52px;
+            height: 52px;
             border-radius: 50%;
             background: linear-gradient(135deg, var(--md-sys-color-primary), var(--md-sys-color-tertiary));
             color: var(--md-sys-color-on-primary);
@@ -297,14 +214,9 @@
             align-items: center;
             border: none;
             cursor: pointer;
-            box-shadow: 0 6px 20px rgba(255, 0, 153, 0.4);
+            box-shadow: 0 4px 12px rgba(224, 0, 128, 0.3);
             z-index: 100;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .theme-toggle:hover {
-            transform: scale(1.1) rotate(15deg);
-            box-shadow: 0 8px 24px rgba(255, 0, 153, 0.5);
+            transition: transform 0.2s ease;
         }
 
         .theme-toggle:active {
@@ -312,22 +224,16 @@
         }
 
         .footer {
-            margin-top: 32px;
-            font-size: 14px;
+            margin-top: 24px;
+            font-size: 13px;
             color: var(--md-sys-color-on-surface-variant);
             text-align: center;
             opacity: 0.8;
-        }
-
-        .glow {
-            animation: glowPulse 2s infinite alternate;
+            padding: 0 12px;
         }
 
         .premium {
-            animation: premiumPulse 1s infinite alternate, pulseUrgent 1.5s infinite;
-            position: relative;
-            overflow: hidden;
-            border: 2px solid var(--md-sys-color-tertiary) !important;
+            border: 1px solid var(--md-sys-color-tertiary) !important;
         }
 
         .countdown {
@@ -345,52 +251,7 @@
             font-size: 11px;
             font-weight: bold;
             z-index: 2;
-            border: 2px solid var(--md-sys-color-on-error);
-        }
-
-        @keyframes glowPulse {
-            0% {
-                box-shadow: 0 0 10px rgba(255, 0, 153, 0.7);
-                border-color: var(--md-sys-color-primary);
-            }
-            100% {
-                box-shadow: 0 0 20px rgba(255, 0, 153, 0.9);
-                border-color: var(--md-sys-color-tertiary);
-            }
-        }
-
-        @keyframes premiumPulse {
-            0% {
-                box-shadow: 0 0 15px rgba(255, 0, 153, 0.8),
-                            0 0 30px rgba(255, 0, 153, 0.6),
-                            0 0 50px rgba(255, 0, 153, 0.4);
-                transform: scale(1);
-            }
-            100% {
-                box-shadow: 0 0 25px rgba(255, 0, 153, 1),
-                            0 0 45px rgba(255, 0, 153, 0.8),
-                            0 0 70px rgba(255, 0, 153, 0.6);
-                transform: scale(1.01);
-            }
-        }
-
-        .sparkles {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            pointer-events: none;
-        }
-
-        .sparkle {
-            position: absolute;
-            width: 4px;
-            height: 4px;
-            background-color: white;
-            border-radius: 50%;
-            opacity: 0;
-            box-shadow: 0 0 4px 1px rgba(255,255,255,0.8);
+            border: 1px solid var(--md-sys-color-on-error);
         }
 
         .urgent-badge {
@@ -403,25 +264,22 @@
             font-weight: bold;
             top: -10px;
             right: 16px;
-            transform: rotate(15deg);
-            animation: pulseUrgent 1s infinite;
             border: 1px solid var(--md-sys-color-on-secondary);
             z-index: 3;
         }
 
         .exclusive-text {
             font-weight: bold;
-            background: linear-gradient(90deg, #ffebf7, #ffffff);
+            background: linear-gradient(90deg, #ffd6eb, #ffffff);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
-            animation: neonGlow 1.5s infinite alternate;
         }
 
         .ig-link {
             background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
             color: white;
-            border: 2px solid #dc2743 !important;
+            border: 1px solid #dc2743 !important;
         }
 
         .ig-link .link-icon {
@@ -439,94 +297,131 @@
             font-size: 12px;
             font-weight: bold;
             z-index: 3;
-            box-shadow: 0 2px 10px rgba(255, 0, 170, 0.5);
-        }
-
-        @keyframes bounceIn {
-            0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
-            40% {transform: translateY(-20px);}
-            60% {transform: translateY(-10px);}
-        }
-
-        .bounce {
-            animation: bounceIn 1.5s infinite;
-        }
-
-        @keyframes shake {
-            0%, 100% {transform: translateX(0) rotate(0);}
-            20%, 60% {transform: translateX(-5px) rotate(-5deg);}
-            40%, 80% {transform: translateX(5px) rotate(5deg);}
-        }
-
-        .shake {
-            animation: shake 1s infinite;
-        }
-
-        .flicker {
-            animation: flicker 3s ease-in-out infinite alternate;
-        }
-
-        @keyframes flicker {
-            0%, 18%, 22%, 25%, 53%, 57%, 100% {
-                opacity: 1;
-            }
-            20%, 24%, 55% {
-                opacity: 0.5;
-            }
         }
 
         .tease-button {
             position: fixed;
-            bottom: 100px;
-            right: 30px;
+            bottom: 90px;
+            right: 20px;
             background: var(--md-sys-color-primary);
             color: white;
             border: none;
-            width: 50px;
-            height: 50px;
+            width: 48px;
+            height: 48px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 4px 15px rgba(255, 0, 153, 0.6);
+            box-shadow: 0 3px 10px rgba(224, 0, 128, 0.4);
             cursor: pointer;
             z-index: 100;
+            transition: transform 0.2s ease;
+        }
+
+        .tease-button:active {
+            transform: scale(0.95);
         }
 
         .follower-counter {
             position: absolute;
-            bottom: -15px;
-            right: 10px;
+            bottom: -14px;
+            right: 8px;
             background: var(--md-sys-color-error);
             color: white;
-            padding: 2px 8px;
+            padding: 2px 6px;
             border-radius: 12px;
             font-size: 10px;
             font-weight: bold;
             z-index: 101;
         }
 
-        @media (max-width: 480px) {
+        /* Motion for users who don't prefer reduced motion */
+        @media (prefers-reduced-motion: no-preference) {
             .avatar {
-                width: 120px;
-                height: 120px;
-                font-size: 48px;
+                animation: teaseWave 3s ease-in-out infinite;
+            }
+
+            @keyframes teaseWave {
+                0% { transform: translateY(0); }
+                50% { transform: translateY(-6px); }
+                100% { transform: translateY(0); }
+            }
+
+            .premium {
+                animation: premiumPulse 2s infinite alternate;
+            }
+
+            @keyframes premiumPulse {
+                0% { box-shadow: 0 0 10px rgba(224, 0, 128, 0.5); }
+                100% { box-shadow: 0 0 20px rgba(224, 0, 128, 0.7); }
+            }
+
+            .urgent-badge {
+                animation: pulseUrgent 1.5s infinite;
+            }
+
+            @keyframes pulseUrgent {
+                0% { transform: rotate(15deg) scale(1); opacity: 1; }
+                50% { transform: rotate(15deg) scale(1.1); opacity: 0.9; }
+                100% { transform: rotate(15deg) scale(1); opacity: 1; }
+            }
+
+            .link-card:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 6px 16px rgba(224, 0, 128, 0.3);
+            }
+
+            .theme-toggle:hover {
+                transform: scale(1.05);
+            }
+
+            .exclusive-text {
+                animation: neonGlow 2s infinite alternate;
+            }
+
+            @keyframes neonGlow {
+                0% { text-shadow: 0 0 3px #ff00aa, 0 0 6px #ff00aa; }
+                100% { text-shadow: 0 0 6px #ff00aa, 0 0 12px #ff00aa; }
+            }
+
+            .link-card.primary-link:after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: -100%;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+                transition: left 0.5s;
+            }
+
+            .link-card.primary-link:hover:after {
+                left: 100%;
+            }
+        }
+
+        @media (max-width: 375px) {
+            .avatar {
+                width: 100px;
+                height: 100px;
+                font-size: 40px;
             }
             
             .name {
-                font-size: 28px;
+                font-size: 24px;
             }
             
             .bio {
-                font-size: 16px;
+                font-size: 15px;
             }
             
             .link-card {
-                padding: 16px 18px;
+                padding: 14px 16px;
+                gap: 12px;
             }
             
             .link-text {
-                font-size: 16px;
+                font-size: 15px;
             }
         }
     </style>
@@ -534,29 +429,22 @@
 <body>
     <div class="container">
         <header class="header">
-            <div class="hot-spot"></div>
-            <div class="avatar">AI
-                <div class="eyes">
-                    <div class="eye"></div>
-                    <div class="eye wink"></div>
-                </div>
-            </div>
-            <h1 class="name">👑 AI SIREN 👑</h1>
-            <p class="bio">Your digital fantasy waiting to be unlocked... <span id="flirtyText">Are you brave enough?</span></p>
+            <div class="avatar">AV</div>
+            <h1 class="name">Annie Valea</h1>
+            <p class="bio">Your digital fantasy waiting to be unlocked... <span id="flirtyText">What are you waiting for?</span></p>
         </header>
         
         <main class="links">
             <!-- Main CTA - Fanvue -->
-            <a href="https://fanvue.com" class="link-card primary-link premium" target="_blank" id="mainCta">
-                <div class="sparkles" id="fanvueSparkles"></div>
-                <div class="urgent-badge">🔥 LAST CHANCE!</div>
+            <a href="https://fanvue.com" class="link-card primary-link premium" target="_blank" id="mainCta" aria-label="Exclusive content - VIP only">
+                <div class="urgent-badge">HOT</div>
                 <div class="countdown">5</div>
                 <div class="exclusive-tag">VIP ONLY</div>
                 <div class="link-icon">
                     <span class="material-symbols-outlined">lock_open</span>
                 </div>
                 <div class="link-text">
-                    <span class="exclusive-text">EXCLUSIVE CONTENT</span> — See what I can't post on Instagram <span class="material-symbols-outlined" style="font-size: 20px;">visibility</span>
+                    <span class="exclusive-text">EXCLUSIVE CONTENT</span> — See what I can't post on Instagram
                 </div>
                 <div class="link-icon">
                     <span class="material-symbols-outlined">favorite</span>
@@ -564,34 +452,34 @@
             </a>
             
             <!-- Secondary CTA - Instagram -->
-            <a href="https://instagram.com" class="link-card ig-link glow" target="_blank">
+            <a href="https://instagram.com" class="link-card ig-link" target="_blank" aria-label="My Instagram profile">
                 <div class="link-icon">
                     <span class="material-symbols-outlined">photo_camera</span>
                 </div>
-                <div class="link-text">My "Safe" Instagram (Just the beginning...)</div>
+                <div class="link-text">My Instagram (Just the beginning...)</div>
                 <div class="link-icon">
                     <span class="material-symbols-outlined">arrow_outward</span>
                 </div>
             </a>
             
             <!-- Teaser CTA - DM -->
-            <a href="#" class="link-card" id="dmTease">
+            <a href="#" class="link-card" id="dmTease" aria-label="DM me - VIPs get responses">
                 <div class="link-icon">
                     <span class="material-symbols-outlined">chat</span>
                 </div>
-                <div class="link-text">Slide into my DMs (VIPs get responses 💋)</div>
+                <div class="link-text">Slide into my DMs (VIPs get responses)</div>
                 <div class="link-icon">
                     <span class="material-symbols-outlined">arrow_outward</span>
                 </div>
             </a>
             
             <!-- Bonus CTA - Limited Offer -->
-            <a href="https://fanvue.com" class="link-card primary-link" target="_blank" style="animation: none;" id="bonusCta">
+            <a href="https://fanvue.com" class="link-card primary-link" target="_blank" id="bonusCta" aria-label="Special offer - private show">
                 <div class="link-icon">
                     <span class="material-symbols-outlined">confirmation_number</span>
                 </div>
                 <div class="link-text">
-                    <b>SPECIAL OFFER:</b> First 50 subs get a <span class="exclusive-text">private show</span> 🎀
+                    <b>SPECIAL OFFER:</b> First 50 subs get a private show
                 </div>
                 <div class="link-icon">
                     <span class="material-symbols-outlined">grade</span>
@@ -600,235 +488,149 @@
         </main>
         
         <footer class="footer">
-            <span class="flicker">⚠️ WARNING:</span> 18+ content available to subscribers only. Offers expire in <span id="countdownTimer" style="font-weight:bold;">3:05</span> ⏳
+            <span>⚠️ WARNING:</span> 18+ content available to subscribers only. Offers expire in <span id="countdownTimer" style="font-weight:bold;">3:05</span> ⏳
         </footer>
     </div>
     
     <!-- Tease Button -->
-    <button class="tease-button" id="teaseButton">
+    <button class="tease-button" id="teaseButton" aria-label="Tease button">
         <span class="material-symbols-outlined">flutter_dash</span>
         <div class="follower-counter" id="followerCounter">5,246 online</div>
     </button>
     
     <!-- Theme Toggle -->
-    <button class="theme-toggle" id="themeToggle">
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
         <span class="material-symbols-outlined" id="themeIcon">brightness_4</span>
     </button>
 
-    <script type="module">
-        const themeToggle = document.getElementById('themeToggle');
-        const themeIcon = document.getElementById('themeIcon');
-        const html = document.documentElement;
-        const fanvueLink = document.querySelector('.premium');
-        const sparklesContainer = document.getElementById('fanvueSparkles');
-        const countdownTimer = document.getElementById('countdownTimer');
-        const teaseButton = document.getElementById('teaseButton');
-        const followerCounter = document.getElementById('followerCounter');
-        const flirtyText = document.getElementById('flirtyText');
-        const dmTease = document.getElementById('dmTease');
-        const mainCta = document.getElementById('mainCta');
-        const bonusCta = document.getElementById('bonusCta');
-        
-        // Flirty text rotation
-        const flirtyTexts = [
-            "Are you brave enough?",
-            "I don't bite... hard 😈",
-            "Secret fantasies await...",
-            "You know you're curious 😉",
-            "What are you waiting for?",
-            "Don't be shy...",
-            "I see you looking 😘"
-        ];
-        
-        let flirtyIndex = 0;
-        setInterval(() => {
-            flirtyIndex = (flirtyIndex + 1) % flirtyTexts.length;
-            flirtyText.textContent = flirtyTexts[flirtyIndex];
-        }, 5000);
-        
-        // Check for saved theme preference or use system preference
-        const savedTheme = localStorage.getItem('theme');
-        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        
-        if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
-            html.setAttribute('data-theme', 'dark');
-            themeIcon.textContent = 'brightness_7';
-        } else {
-            html.setAttribute('data-theme', 'light');
-            themeIcon.textContent = 'brightness_4';
-        }
-        
-        themeToggle.addEventListener('click', () => {
-            const currentTheme = html.getAttribute('data-theme');
-            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    <!-- Optimized JavaScript -->
+    <script>
+        // Defer non-critical JavaScript
+        document.addEventListener('DOMContentLoaded', function() {
+            const themeToggle = document.getElementById('themeToggle');
+            const themeIcon = document.getElementById('themeIcon');
+            const html = document.documentElement;
+            const countdownTimer = document.getElementById('countdownTimer');
+            const teaseButton = document.getElementById('teaseButton');
+            const followerCounter = document.getElementById('followerCounter');
+            const flirtyText = document.getElementById('flirtyText');
+            const dmTease = document.getElementById('dmTease');
+            const mainCta = document.getElementById('mainCta');
+            const bonusCta = document.getElementById('bonusCta');
             
-            html.setAttribute('data-theme', newTheme);
-            localStorage.setItem('theme', newTheme);
+            // Flirty text rotation (simplified)
+            const flirtyTexts = [
+                "What are you waiting for?",
+                "Secret fantasies await...",
+                "You know you're curious",
+                "Don't be shy..."
+            ];
             
-            if (newTheme === 'dark') {
+            let flirtyIndex = 0;
+            const textInterval = setInterval(() => {
+                flirtyIndex = (flirtyIndex + 1) % flirtyTexts.length;
+                flirtyText.textContent = flirtyTexts[flirtyIndex];
+            }, 6000);
+            
+            // Theme toggle
+            const savedTheme = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            
+            if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+                html.setAttribute('data-theme', 'dark');
                 themeIcon.textContent = 'brightness_7';
-            } else {
-                themeIcon.textContent = 'brightness_4';
             }
-        });
-
-        // Create sparkles effect for Fanvue link
-        function createSparkle() {
-            const sparkle = document.createElement('div');
-            sparkle.classList.add('sparkle');
-            sparkle.style.left = Math.random() * 100 + '%';
-            sparkle.style.top = Math.random() * 100 + '%';
-            sparkle.style.width = Math.random() * 5 + 3 + 'px';
-            sparkle.style.height = sparkle.style.width;
-            sparkle.style.animationDuration = Math.random() * 2 + 1 + 's';
-            sparkle.style.opacity = Math.random() * 0.7 + 0.3;
-            sparkle.style.backgroundColor = `hsl(${Math.random() * 60 + 330}, 100%, 70%)`;
-            sparklesContainer.appendChild(sparkle);
             
-            setTimeout(() => {
-                sparkle.style.opacity = 0;
-                setTimeout(() => sparkle.remove(), 1000);
-            }, 500);
-        }
-
-        let sparkleInterval = setInterval(createSparkle, 100);
-
-        // Countdown timer
-        function updateCountdown() {
-            const countdownElement = document.querySelector('.countdown');
-            const texts = ["5", "4", "3", "2", "1", "0"];
-            let currentIndex = 0;
-            
-            return setInterval(() => {
-                countdownElement.textContent = texts[currentIndex];
-                currentIndex = (currentIndex + 1) % texts.length;
-            }, 1500);
-        }
-        
-        function startTimer(duration, display) {
-            let timer = duration, minutes, seconds;
-            return setInterval(function () {
-                minutes = parseInt(timer / 60, 10);
-                seconds = parseInt(timer % 60, 10);
-
-                minutes = minutes < 10 ? "0" + minutes : minutes;
-                seconds = seconds < 10 ? "0" + seconds : seconds;
-
-                display.textContent = minutes + ":" + seconds;
-
-                if (--timer < 0) {
-                    timer = duration;
-                }
-                
-                // Simulate follower growth
-                let current = parseInt(followerCounter.textContent.replace(/[^0-9]/g, ''));
-                let growth = Math.floor(Math.random() * 30) + 1;
-                followerCounter.textContent = (current + growth).toLocaleString() + " online";
-                
-            }, 1000);
-        }
-
-        // Start countdowns
-        const countdownAnimation = updateCountdown();
-        startTimer(185, countdownTimer);
-
-        // Tease button animation
-        teaseButton.addEventListener('click', () => {
-            teaseButton.classList.add('bounce');
-            setTimeout(() => {
-                teaseButton.classList.remove('bounce');
-            }, 2000);
-            
-            // Show a tease message
-            if(Math.random() > 0.5) {
-                flirtyText.classList.add('shake');
-                flirtyText.textContent = "Naughty! 😏 Click the pink button below...";
-                setTimeout(() => {
-                    flirtyText.classList.remove('shake');
-                }, 2000);
-            } else {
-                bonusCta.classList.add('shake');
-                setTimeout(() => {
-                    bonusCta.classList.remove('shake');
-                }, 1000);
-            }
-        });
-
-        // DM Tease interaction
-        dmTease.addEventListener('click', (e) => {
-            e.preventDefault();
-            dmTease.innerHTML = `
-                <div class="link-icon">
-                    <span class="material-symbols-outlined">lock</span>
-                </div>
-                <div class="link-text">VIPs only, sweetheart... Subscribe first 💋</div>
-                <div class="link-icon">
-                    <span class="material-symbols-outlined">heart_plus</span>
-                </div>
-            `;
-            
-            // Animate main CTA to draw attention
-            mainCta.classList.add('shake');
-            setTimeout(() => {
-                mainCta.classList.remove('shake');
-            }, 1000);
-        });
-
-        // Focus on main CTAs
-        document.querySelectorAll('.link-card').forEach(link => {
-            link.addEventListener('mouseenter', () => {
-                if (link.classList.contains('premium')) {
-                    clearInterval(sparkleInterval);
-                    sparkleInterval = setInterval(createSparkle, 50);
-                }
+            themeToggle.addEventListener('click', () => {
+                const currentTheme = html.getAttribute('data-theme');
+                const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+                html.setAttribute('data-theme', newTheme);
+                localStorage.setItem('theme', newTheme);
+                themeIcon.textContent = newTheme === 'dark' ? 'brightness_7' : 'brightness_4';
             });
 
-            link.addEventListener('mouseleave', () => {
-                if (link.classList.contains('premium')) {
-                    clearInterval(sparkleInterval);
-                    sparkleInterval = setInterval(createSparkle, 100);
-                }
-            });
-
-            link.addEventListener('click', (e) => {
-                if (link.classList.contains('primary-link') || link.classList.contains('ig-link')) {
-                    e.preventDefault();
-                    // Simulate loading animation
-                    if (link.classList.contains('premium')) {
-                        link.innerHTML = '<div class="sparkles" id="fanvueSparkles"></div><div class="link-icon"><span class="material-symbols-outlined">hourglass_top</span></div><div class="link-text">Unlocking Your Private Show...</div>';
-                        setTimeout(() => {
-                            window.open('https://fanvue.com', '_blank');
-                            link.innerHTML = `
-                                <div class="sparkles" id="fanvueSparkles"></div>
-                                <div class="urgent-badge">🔥 LAST CHANCE!</div>
-                                <div class="countdown">5</div>
-                                <div class="exclusive-tag">VIP ONLY</div>
-                                <div class="link-icon"><span class="material-symbols-outlined">lock_open</span></div>
-                                <div class="link-text"><span class="exclusive-text">EXCLUSIVE CONTENT</span> — See what I can't post on Instagram <span class="material-symbols-outlined" style="font-size: 20px;">visibility</span></div>
-                                <div class="link-icon"><span class="material-symbols-outlined">favorite</span></div>
-                            `;
-                        }, 2000);
-                    } else if (link.classList.contains('ig-link')) {
-                        link.innerHTML = '<div class="link-icon"><span class="material-symbols-outlined">progress_activity</span></div><div class="link-text">Opening Instagram...</div>';
-                        setTimeout(() => {
-                            window.open('https://instagram.com', '_blank');
-                            link.innerHTML = `
-                                <div class="link-icon"><span class="material-symbols-outlined">photo_camera</span></div>
-                                <div class="link-text">My "Safe" Instagram (Just the beginning...)</div>
-                                <div class="link-icon"><span class="material-symbols-outlined">arrow_outward</span></div>
-                            `;
-                        }, 1500);
-                    } else if (link.id === 'bonusCta') {
-                        link.innerHTML = '<div class="link-icon"><span class="material-symbols-outlined">hourglass_top</span></div><div class="link-text">Claiming your special offer...</div>';
-                        setTimeout(() => {
-                            window.open('https://fanvue.com', '_blank');
-                            link.innerHTML = `
-                                <div class="link-icon"><span class="material-symbols-outlined">confirmation_number</span></div>
-                                <div class="link-text"><b>SPECIAL OFFER:</b> First 50 subs get a <span class="exclusive-text">private show</span> 🎀</div>
-                                <div class="link-icon"><span class="material-symbols-outlined">grade</span></div>
-                            `;
-                        }, 2000);
+            // Countdown timer (simplified)
+            function startTimer(duration, display) {
+                let timer = duration, minutes, seconds;
+                const interval = setInterval(function() {
+                    minutes = parseInt(timer / 60, 10);
+                    seconds = parseInt(timer % 60, 10);
+                    minutes = minutes < 10 ? "0" + minutes : minutes;
+                    seconds = seconds < 10 ? "0" + seconds : seconds;
+                    display.textContent = minutes + ":" + seconds;
+                    
+                    if (--timer < 0) {
+                        clearInterval(interval);
+                        display.parentElement.innerHTML = "⚠️ OFFER EXPIRED - Check back soon!";
                     }
+                }, 1000);
+                
+                // Update follower counter randomly (simplified)
+                const followerInterval = setInterval(() => {
+                    const current = parseInt(followerCounter.textContent.replace(/\D/g, ''));
+                    const growth = Math.floor(Math.random() * 20) + 1;
+                    followerCounter.textContent = (current + growth).toLocaleString() + " online";
+                }, 10000);
+                
+                return {interval, followerInterval};
+            }
+
+            // Start countdown
+            const {interval, followerInterval} = startTimer(185, countdownTimer);
+
+            // Tease button
+            teaseButton.addEventListener('click', () => {
+                const current = flirtyText.textContent;
+                flirtyText.textContent = current.includes("VIP") ? 
+                    "Check out my exclusive content..." : 
+                    "VIPs get special attention...";
+                
+                mainCta.classList.add('premium');
+                setTimeout(() => mainCta.classList.remove('premium'), 1000);
+            });
+
+            // DM Tease
+            dmTease.addEventListener('click', (e) => {
+                e.preventDefault();
+                dmTease.innerHTML = `
+                    <div class="link-icon">
+                        <span class="material-symbols-outlined">lock</span>
+                    </div>
+                    <div class="link-text">VIPs only... Subscribe first</div>
+                    <div class="link-icon">
+                        <span class="material-symbols-outlined">heart_plus</span>
+                    </div>
+                `;
+                mainCta.focus();
+            });
+
+            // Clean up on page unload
+            window.addEventListener('beforeunload', () => {
+                clearInterval(interval);
+                clearInterval(followerInterval);
+                clearInterval(textInterval);
+            });
+            
+            // Optimized link clicks
+            document.querySelectorAll('.link-card').forEach(link => {
+                if (link.id !== 'dmTease') {
+                    link.addEventListener('click', (e) => {
+                        if (!link.classList.contains('premium') && !link.classList.contains('ig-link')) return;
+                        
+                        e.preventDefault();
+                        const originalContent = link.innerHTML;
+                        link.innerHTML = `
+                            <div class="link-icon">
+                                <span class="material-symbols-outlined">progress_activity</span>
+                            </div>
+                            <div class="link-text">Loading...</div>
+                        `;
+                        
+                        setTimeout(() => {
+                            window.open(link.href, '_blank');
+                            link.innerHTML = originalContent;
+                        }, 1000);
+                    });
                 }
             });
         });
